@@ -41,21 +41,17 @@
 
 						</div>
 
-						<div class="row justify-content-md-center">
-							<div class="col col-lg-2">
-								<div class="actions">
-									<%= f.submit "Log in", class: 'btn btn-light btn-xl js-scroll-trigger' %>
+							<div class="row">
+								<div class="col">
+									<div class="actions">
+										<%= f.submit "Log in", class: 'btn btn-light btn-xl js-scroll-trigger' %>
+									</div>
+									<% end %>
 								</div>
-								<% end %>
 							</div>
-							<div class="col-md-auto">
-								<br>
-							</div>
-							<div class="col col-lg-2">
-									<%= render "devise/shared/links"%>
-							</div>
-						</div>
-
+							<br>
+							<%= render "devise/shared/links"%>
+						
 					</div>
 				</div>
 			</div>
