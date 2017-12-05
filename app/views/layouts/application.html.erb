@@ -9,7 +9,8 @@
     <meta name="author" content="">
 
     <title>Creative - Start Bootstrap Theme</title>
-
+    <%= csrf_meta_tags %>
+    
     <!-- Bootstrap core CSS -->
     <link href="https://blackrockdigital.github.io/startbootstrap-creative/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -69,7 +70,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="https://blackrockdigital.github.io/startbootstrap-creative/js/creative.min.js"></script>
-
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 
 </html>
