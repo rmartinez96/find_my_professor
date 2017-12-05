@@ -1,25 +1,56 @@
-<h2>Change your password</h2>
+		<section class="bg-primary" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 mx-auto text-center">
+						<h2 class="section-heading text-white">Change Your Password</h2>
+						<hr class="light my-4">
+						<p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+						<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+						<%= devise_error_messages! %>
+						<h5><%= f.hidden_field :reset_password_token %></h5>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+						<div align="center">
 
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
+							<div class="form-group">
+								<div class="form-group col-md-6">
+									<div class="field">
+										<h5><%= f.label :password, "New Password" %></h5>
+										<% if @minimum_password_length %>
+										<em>(<%= @minimum_password_length %> characters minimum)</em><br />
+										<% end %>
+										<%= f.password_field :password, autofocus: true, autocomplete: "off", class: "form-control" %>
+									</div>
+								</div>
+							</div>
 
-<%= render "devise/shared/links" %>
+							<div class="form-group">
+								<div class="form-group col-md-6">
+									<div class="field">
+										<h5><%= f.label :password_confirmation, "Confirm New Password" %></h5>
+										<%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+									</div>
+								</div>
+							</div>
+
+							<br>
+
+							<div class="row">
+								<div class="col">
+									<div class="actions">
+										<%= f.submit "Change my password", class: 'btn btn-light btn-xl js-scroll-trigger' %>
+									</div>
+									<% end %>
+								</div>
+							</div>
+
+							<br>
+
+							<%= render "devise/shared/links" %>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>

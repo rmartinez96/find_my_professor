@@ -1,16 +1,38 @@
-<h2>Resend confirmation instructions</h2>
+		<section class="bg-primary" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 mx-auto text-center">
+						<h2 class="section-heading text-white">Resend Confirmation Instructions</h2>
+						<hr class="light my-4">
+						<p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+						<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+						<%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-  </div>
+						<div align="center">
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
+							<div class="form-group">
+								<div class="form-group col-md-6">
 
-<%= render "devise/shared/links" %>
+									<div class="field">
+										<h5><%= f.label :email %></h5>
+										<%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: "form-control" %>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col">
+									<div class="actions">
+										<%= f.submit "Resend confirmation instructions", class: 'btn btn-light btn-xl js-scroll-trigger' %>
+									</div>
+								</div>
+							</div>
+							<% end %>
+
+							<%= render "devise/shared/links" %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>

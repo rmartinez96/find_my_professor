@@ -1,16 +1,40 @@
-<h2>Resend unlock instructions</h2>
+		<section class="bg-primary" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 mx-auto text-center">
+						<h2 class="section-heading text-white">Resend Unlock Instructions</h2>
+						<hr class="light my-4">
+						<p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
 
-<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+						<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+						<%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+						<div align="center">
 
-  <div class="actions">
-    <%= f.submit "Resend unlock instructions" %>
-  </div>
-<% end %>
+							<div class="form-group">
+								<div class="form-group col-md-6">
+									<div class="field">
+										<%= f.label :email %><br />
+										<%= f.email_field :email, autofocus: true %>
+									</div>
+								</div>
+							</div>
 
-<%= render "devise/shared/links" %>
+							<div class="row">
+								<div class="col">
+									<div class="actions">
+										<%= f.submit "Resend unlock instructions" %>
+									</div>
+									<% end %>
+								</div>
+							</div>
+
+							<br>
+
+							<%= render "devise/shared/links" %>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
