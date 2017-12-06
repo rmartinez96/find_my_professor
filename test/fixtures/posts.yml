@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  availability: MyString
+  availability: false
   comment: MyText
   time: MyString
 
 two:
-  availability: MyString
+  availability: false
   comment: MyText
   time: MyString

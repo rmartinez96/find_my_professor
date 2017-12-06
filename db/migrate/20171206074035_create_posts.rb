@@ -1,7 +1,7 @@
 class CreatePosts < ActiveRecord::Migration[5.1]
   def change
     create_table :posts do |t|
-      t.string :availability
+      t.boolean :availability
       t.text :comment
       t.string :time
 

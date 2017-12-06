@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206072207) do
+ActiveRecord::Schema.define(version: 20171206074035) do
 
   create_table "posts", force: :cascade do |t|
-    t.string "availability"
+    t.boolean "availability"
     t.text "comment"
     t.string "time"
     t.datetime "created_at", null: false
