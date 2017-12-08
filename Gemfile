@@ -50,6 +50,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rails_admin'
+  gem 'rails_admin_material'
 end
 
 group :development do
