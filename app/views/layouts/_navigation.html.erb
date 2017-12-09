@@ -16,11 +16,14 @@
                       <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/users/sign_in">Sign In</a>
                       </li>
-            <% else %>
+                    <% end %>
 
-                      <li class="nav-item">
-                      <%= link_to "Sign Out", destroy_user_session_url, method: :delete, class: "nav-link"%>
+                    <% if user_signed_in? %>
+                   <a class="nav-link js-scroll-trigger" >Welcome,<%= current_user.email %></a>
+               <li class="nav-item">
+                      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link"%>
                     </li>
+                   
             <%end%>
 
           </ul>
