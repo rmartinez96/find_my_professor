@@ -242,7 +242,7 @@ DEPENDENCIES
   pg
   puma (~> 3.7)
   rails (~> 5.1.4)
-  rails_admin
+  rails_admin (~> 1.2)
   rails_admin_material
   sass-rails (~> 5.0)
   selenium-webdriver
